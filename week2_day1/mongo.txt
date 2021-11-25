@@ -1,0 +1,118 @@
+step 1 = mongo
+
+step 2 = show dbs
+
+step 3 = use user (fileName) if file will be there than we will switch in that or it will autometacaly create it
+
+now we are going to preforms crud operations
+
+c = create data;
+
+r = read data;
+
+u = update data (Put or patch)
+
+d = delete data
+
+-------------------------------------------------------------------------------------------------------
+==== 1 c = create data ====
+-----------------------------------------------------------------------------------------------------------
+db.users.find()  ---> this will show nothing because it has no data
+
+db.users.insert({name : "suraj", age : 25, })
+show dbs //--> you will see file
+db.user.find() --> you will see the data along with a unique id provided by mongo
+
+
+
+db.user.insertMany([{name:"sanoj" , age:34},{name:"jay" , age:78},{name:"shubham" , age:30}])
+"acknowledge":true,
+  "insertedIds" : [
+                ObjectId("619bbff8fee361e141299065"),
+                ObjectId("619bbff8fee361e141299066"),
+                ObjectId("619bbff8fee361e141299067")
+        ]
+}
+
+
+
+-----------------------------------------------------------------------------------------------
+R - read data
+-----------------------------------------------------------------------------------------------
+
+db.user.find()
+db.user.findOne()
+db.user.find({name:"suraj"})
+
+db.user.findMany({gender:Male}).pretty()
+
+
+
+
+> db.user.find()
+{ "_id" : ObjectId("619bbdfafee361e141299064"), "name" : "suraj", "age" : 25 }
+{ "_id" : ObjectId("619bbff8fee361e141299065"), "name" : "sanoj", "age" : 70 }
+{ "_id" : ObjectId("619bbff8fee361e141299066"), "name" : "jay", "age" : 56 }
+{ "_id" : ObjectId("619bbff8fee361e141299067"), "name" : "shubham", "age" : 30 }
+
+> db.user.find({name:"suraj"})
+{ "_id" : ObjectId("619bbdfafee361e141299064"), "name" : "suraj", "age" : 25 }
+>
+ db.user.find({name:"suraj"})
+{ "_id" : ObjectId("619bbdfafee361e141299064"), "name" : "suraj", "age" : 25 }
+>
+> 
+>
+> db.user.find().pretty()
+{
+        "_id" : ObjectId("619bbdfafee361e141299064"),
+        "name" : "suraj",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("619bbff8fee361e141299065"),
+        "name" : "sanoj",
+        "age" : 70
+}
+{ "_id" : ObjectId("619bbff8fee361e141299066"), "name" : "jay", "age" : 56 }
+{
+        "_id" : ObjectId("619bbff8fee361e141299067"),
+        "name" : "shubham",
+        "age" : 30
+}
+>
+> db.user.findOne()
+{
+        "_id" : ObjectId("619bbdfafee361e141299064"),
+        "name" : "suraj",
+        "age" : 25
+}
+>
+
+
+
+------------------------------------------------------------------------------
+u = update
+-----------------------------------------------------------------------------
+db.user.update({"_id" : ObjectId("619bbdfafee361e141299064")},{lastName:"Kumar"})
+Note:- this will delete all data from this id and only kumar will show in data base Its kind of Put
+example:---- 
+> db.user.update({"_id" : ObjectId("619bbdfafee361e141299064")},{lastName : "kumar"})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.user.find({"_id" : ObjectId("619bbdfafee361e141299064")}) 
+{ "_id" : ObjectId("619bbdfafee361e141299064"), "lastName" : "kumar" }
+>
+
+
+
+db.user.update({"_id" : ObjectId("619bbdfafee361e141299064")},{$set:{name:"suraj"}, {age:25} , {gender:"male"}})
+------------------------------------------------------------------------------
+D = delete data because
+------------------------------------------------------------------------------
+
+
+db.user.remove({--id : ObjectId(isud8r30sjdlfpwi3osde)})
+db.user.deleteOne({gender:"male"}) this will delete only one data
+db.user.deleteMany({gender:"male"}) this will delete all data which have male gender
+>
+
