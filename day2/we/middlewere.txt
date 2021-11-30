@@ -1,0 +1,1341 @@
+1--find all movies which are equal to movie_name
+------------------------------------------------------------
+ANS:-  db.movie.find({"movieName" : "Rugrats in Paris: The Movie"})
+{ "_id" : ObjectId("614c8d8c1d0ebc875ef36f21"), "id" : 1, "movieName" : "Rugrats in Paris: The Movie", "MovieGenre" : "Animation|Children|Comedy", "ProductionYear" : 2010, "budget" : "6" }
+>
+
+db.movie.find({movieName :{$eq:"El tren de la memoria"}})
+{ "_id" : ObjectId("614c8d8c1d0ebc875ef36f2e"), "id" : 14, "movieName" : "El tren de la memoria", "MovieGenre" : "Documentary", "ProductionYear" : 1994, "budget" : "86747" }
+--------------------------------------------------------------------------
+2. - find all movies which are not equal to movie_name
+-------------------------------------------------------------------------
+db.movie.find({})
+
+ db.movie.find({movieName :{$ne:"El tren de la memoria"}}).pretty()
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f21"),
+        "id" : 1,
+        "movieName" : "Rugrats in Paris: The Movie",
+        "MovieGenre" : "Animation|Children|Comedy",
+        "ProductionYear" : 2010,
+        "budget" : "6"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f22"),
+        "id" : 2,
+        "movieName" : "Logan's War: Bound by Honor",
+        "MovieGenre" : "Action|Drama|Thriller",
+        "ProductionYear" : 1972,
+        "budget" : "77951"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f23"),
+        "id" : 3,
+        "movieName" : "Digimon: The Movie",
+        "MovieGenre" : "Adventure|Animation|Children",
+        "ProductionYear" : 2000,
+        "budget" : "06885"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f24"),
+        "id" : 4,
+        "movieName" : "Paradise Alley",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 2009,
+        "budget" : "446"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f25"),
+        "id" : 5,
+        "movieName" : "Our Man in Havana",
+        "MovieGenre" : "Comedy|Drama|Thriller",
+        "ProductionYear" : 2005,
+        "budget" : "11"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f26"),
+        "id" : 6,
+        "movieName" : "Rains Came, The",
+        "MovieGenre" : "Adventure|Drama|Romance",
+        "ProductionYear" : 1998,
+        "budget" : "65"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f27"),
+        "id" : 7,
+        "movieName" : "Rich Hill",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 1985,
+        "budget" : "565"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f28"),
+        "id" : 8,
+        "movieName" : "Hamiltons, The",
+        "MovieGenre" : "Drama|Horror|Thriller",
+        "ProductionYear" : 1992,
+        "budget" : "8"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f29"),
+        "id" : 9,
+        "movieName" : "Down to the Cellar (Do pivnice)",
+        "MovieGenre" : "Adventure|Fantasy|Thriller",
+        "ProductionYear" : 1995,
+        "budget" : "3984"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2a"),
+        "id" : 10,
+        "movieName" : "The Prince",
+        "MovieGenre" : "Action|Thriller",
+        "ProductionYear" : 2006,
+        "budget" : "74"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2b"),
+        "id" : 11,
+        "movieName" : "Blood Suckers from Outer Space",
+        "MovieGenre" : "Comedy|Horror|Sci-Fi",
+        "ProductionYear" : 2005,
+        "budget" : "300"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2c"),
+        "id" : 12,
+        "movieName" : "Reckless Moment, The",
+        "MovieGenre" : "Drama|Film-Noir",
+        "ProductionYear" : 2008,
+        "budget" : "6"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2d"),
+        "id" : 13,
+        "movieName" : "Kautokeino Rebellion, The (Kautokeino-opprøret)",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 1993,
+        "budget" : "44222"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2f"),
+        "id" : 15,
+        "movieName" : "Apocalypse Now",
+        "MovieGenre" : "Action|Drama|War",
+        "ProductionYear" : 2004,
+        "budget" : "9538"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f30"),
+        "id" : 16,
+        "movieName" : "Blacula",
+        "MovieGenre" : "Horror",
+        "ProductionYear" : 2011,
+        "budget" : "032"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f31"),
+        "id" : 17,
+        "movieName" : "House of Strangers",
+        "MovieGenre" : "Drama|Film-Noir",
+        "ProductionYear" : 2012,
+        "budget" : "483"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f32"),
+        "id" : 18,
+        "movieName" : "Girls Rock!",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 1984,
+        "budget" : "79911"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f33"),
+        "id" : 19,
+        "movieName" : "Brightness (Yeelen)",
+        "MovieGenre" : "Fantasy",
+        "ProductionYear" : 2007,
+        "budget" : "17722"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f34"),
+        "id" : 20,
+        "movieName" : "Raging Phoenix (Deu suay doo)",
+        "MovieGenre" : "Action|Romance",
+        "ProductionYear" : 2002,
+        "budget" : "20"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f35"),
+        "id" : 21,
+        "movieName" : "Santa's Apprentice",
+        "MovieGenre" : "Animation|Children",
+        "ProductionYear" : 2012,
+        "budget" : "5414"
+}
+Type "it" for more
+>
+
+
+
+----------------------------------------------------------------------------------------
+3 -> find all movies greater than and greater than equal to a budget
+
+//db.movie.find({budget : {$gt : "100"}}).pretty() 
+
+// db.movie.find({budget : {$gte : "100"}}).pretty()
+
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2e"),
+        "id" : 14,
+        "movieName" : "El tren de la memoria",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 1994,
+        "budget" : "86747"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2f"),
+        "id" : 15,
+        "movieName" : "Apocalypse Now",
+        "MovieGenre" : "Action|Drama|War",
+        "ProductionYear" : 2004,
+        "budget" : "9538"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f31"),
+        "id" : 17,
+        "movieName" : "House of Strangers",
+        "MovieGenre" : "Drama|Film-Noir",
+        "ProductionYear" : 2012,
+        "budget" : "483"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f32"),
+        "id" : 18,
+        "movieName" : "Girls Rock!",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 1984,
+        "budget" : "79911"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f33"),
+        "id" : 19,
+        "movieName" : "Brightness (Yeelen)",
+        "MovieGenre" : "Fantasy",
+        "ProductionYear" : 2007,
+        "budget" : "17722"
+
+
+        -----------------------------------------------------------------------------
+        4 -> find all movies less than and less than equal to a budget
+        ------------------------------------------------------------------------------------------------
+        Ans :- db.movie.find({budget:{$lte:"200"}}).pretty()
+
+            :- db.movie.find({budget:{$lt:"200"}}).pretty()
+
+
+            {
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f78"),
+        "id" : 88,
+        "movieName" : "Introduction to Physics, An",
+        "MovieGenre" : "Adventure|Comedy|Documentary|Fantasy",
+        "ProductionYear" : 2004,
+        "budget" : "2"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f79"),
+        "id" : 89,
+        "movieName" : "Kiss Me (Kyss Mig)",
+        "MovieGenre" : "Drama|Romance",
+        "ProductionYear" : 1997,
+        "budget" : "162"
+}
+
+
+
+------------------------------------------------------------------------------------------------
+5-> find all movies that are produced after 2000 with id greater than 100
+---------------------------------------------------------------------------------------------------------
+==> db.movie.find({$and:[{productionYear:{$gt:2000}},{id:{$gt:100}}]})
+
+ db.movie.find({$and:[{ProductionYear:{$gt:2000}},{id:{$gt:100}}]}).pretty()
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f86"),
+        "id" : 102,
+        "movieName" : "This Is Elvis",
+        "MovieGenre" : "Documentary|Drama|Musical",
+        "ProductionYear" : 2008,
+        "budget" : "20"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f88"),
+        "id" : 104,
+        "movieName" : "Principal, The",
+        "MovieGenre" : "Action|Crime|Drama",
+        "ProductionYear" : 2002,
+        "budget" : "73655"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f89"),
+        "id" : 105,
+        "movieName" : "Last of the Mohicans, The",
+        "MovieGenre" : "Adventure|Drama",
+        "ProductionYear" : 2009,
+        "budget" : "06"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f8c"),
+        "id" : 108,
+        "movieName" : "Few Best Men, A",
+        "MovieGenre" : "Comedy",
+        "ProductionYear" : 2001,
+        "budget" : "78"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f8d"),
+        "id" : 109,
+        "movieName" : "In the Name of the Law",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 2005,
+        "budget" : "0191"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f8e"),
+        "id" : 110,
+        "movieName" : "Day the Earth Stood Still, The",
+        "MovieGenre" : "Drama|Sci-Fi|Thriller",
+        "ProductionYear" : 2004,
+        "budget" : "4"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f91"),
+        "id" : 113,
+        "movieName" : "Black Beauty",
+        "MovieGenre" : "Adventure|Children|Drama",
+        "ProductionYear" : 2007,
+        "budget" : "48341"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f93"),
+        "id" : 115,
+        "movieName" : "Ray",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 2006,
+        "budget" : "57"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f94"),
+        "id" : 116,
+        "movieName" : "Hidden Agenda",
+        "MovieGenre" : "Action|Mystery|Thriller",
+        "ProductionYear" : 2009,
+        "budget" : "0"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f95"),
+        "id" : 117,
+        "movieName" : "Molly Maguires, The",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 2010,
+        "budget" : "49181"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f97"),
+        "id" : 119,
+        "movieName" : "Vicky Donor",
+        "MovieGenre" : "Comedy|Romance",
+        "ProductionYear" : 2005,
+        "budget" : "2"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f99"),
+        "id" : 121,
+        "movieName" : "Venus in Fur (La Vénus à la fourrure)",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 2002,
+        "budget" : "17"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f9d"),
+        "id" : 125,
+        "movieName" : "35 and Ticking",
+        "MovieGenre" : "Romance",
+        "ProductionYear" : 2003,
+        "budget" : "019"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f9e"),
+        "id" : 126,
+        "movieName" : "Lightspeed",
+        "MovieGenre" : "Action|Fantasy|Sci-Fi",
+        "ProductionYear" : 2010,
+        "budget" : "01379"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36fa2"),
+        "id" : 130,
+        "movieName" : "In Therapy (Divã)",
+        "MovieGenre" : "Comedy|Drama|Romance",
+        "ProductionYear" : 2007,
+        "budget" : "3335"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36fa3"),
+        "id" : 131,
+        "movieName" : "Paper Lion",
+        "MovieGenre" : "Comedy",
+        "ProductionYear" : 2005,
+        "budget" : "7"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36fa4"),
+        "id" : 132,
+        "movieName" : "Anima Mundi",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 2001,
+        "budget" : "538"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36fa5"),
+        "id" : 133,
+        "movieName" : "God Is Brazilian (Deus É Brasileiro)",
+        "MovieGenre" : "Adventure|Comedy|Fantasy",
+        "ProductionYear" : 2011,
+        "budget" : "333"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36fa7"),
+        "id" : 135,
+        "movieName" : "Wittgenstein",
+        "MovieGenre" : "Comedy|Drama",
+        "ProductionYear" : 2004,
+        "budget" : "168"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36fa8"),
+        "id" : 136,
+        "movieName" : "Tied",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 2007,
+        "budget" : "77859"
+}
+Type "it" for more
+>     
+
+
+
+
+
+----------------------------------------------------------------------------------
+5. find all movies that are produced after 2000 or id greater than 100
+----------------------------------------------------------------------------------
+And:- db.movie.find({$or:[{productionYear:{$gt:2000}},{id:{$gt:100}}]}).pretty()
+
+
+
+
+db.movie.find({$or:[{ProductionYear:{$gt:2000}},{id:{$gt:100}}]}).pretty()         
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f21"),
+        "id" : 1,
+        "movieName" : "Rugrats in Paris: The Movie",
+        "MovieGenre" : "Animation|Children|Comedy",
+        "ProductionYear" : 2010,
+        "budget" : "6"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f24"),
+        "id" : 4,
+        "movieName" : "Paradise Alley",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 2009,
+        "budget" : "446"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f25"),
+        "id" : 5,
+        "movieName" : "Our Man in Havana",
+        "MovieGenre" : "Comedy|Drama|Thriller",
+        "ProductionYear" : 2005,
+        "budget" : "11"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2a"),
+        "id" : 10,
+        "movieName" : "The Prince",
+        "MovieGenre" : "Action|Thriller",
+        "ProductionYear" : 2006,
+        "budget" : "74"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2b"),
+        "id" : 11,
+        "movieName" : "Blood Suckers from Outer Space",
+        "MovieGenre" : "Comedy|Horror|Sci-Fi",
+        "ProductionYear" : 2005,
+        "budget" : "300"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2c"),
+        "id" : 12,
+        "movieName" : "Reckless Moment, The",
+        "MovieGenre" : "Drama|Film-Noir",
+        "ProductionYear" : 2008,
+        "budget" : "6"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2f"),
+        "id" : 15,
+        "movieName" : "Apocalypse Now",
+        "MovieGenre" : "Action|Drama|War",
+        "ProductionYear" : 2004,
+        "budget" : "9538"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f30"),
+        "id" : 16,
+        "movieName" : "Blacula",
+        "MovieGenre" : "Horror",
+        "ProductionYear" : 2011,
+        "budget" : "032"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f31"),
+        "id" : 17,
+        "movieName" : "House of Strangers",
+        "MovieGenre" : "Drama|Film-Noir",
+        "ProductionYear" : 2012,
+        "budget" : "483"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f33"),
+        "id" : 19,
+        "movieName" : "Brightness (Yeelen)",
+        "MovieGenre" : "Fantasy",
+        "ProductionYear" : 2007,
+        "budget" : "17722"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f34"),
+        "id" : 20,
+        "movieName" : "Raging Phoenix (Deu suay doo)",
+        "MovieGenre" : "Action|Romance",
+        "ProductionYear" : 2002,
+        "budget" : "20"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f35"),
+        "id" : 21,
+        "movieName" : "Santa's Apprentice",
+        "MovieGenre" : "Animation|Children",
+        "ProductionYear" : 2012,
+        "budget" : "5414"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f3a"),
+        "id" : 26,
+        "movieName" : "Wild, Wild Planet (I criminali della galassia)",
+        "MovieGenre" : "Sci-Fi",
+        "ProductionYear" : 2005,
+        "budget" : "08"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f3b"),
+        "id" : 27,
+        "movieName" : "Race for Your Life, Charlie Brown",
+        "MovieGenre" : "Adventure|Animation|Children",
+        "ProductionYear" : 2010,
+        "budget" : "69310"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f3c"),
+        "id" : 28,
+        "movieName" : "Like Crazy",
+        "MovieGenre" : "Drama|Romance",
+        "ProductionYear" : 2002,
+        "budget" : "9"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f3d"),
+        "id" : 29,
+        "movieName" : "Naked City, The",
+        "MovieGenre" : "Crime|Drama|Film-Noir|Mystery",
+        "ProductionYear" : 2010,
+        "budget" : "1"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f41"),
+        "id" : 33,
+        "movieName" : "Deeper Shade of Blue, A",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 2007,
+        "budget" : "2"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f43"),
+        "id" : 35,
+        "movieName" : "1971",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 2003,
+        "budget" : "6521"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f46"),
+        "id" : 38,
+        "movieName" : "Salting the Battlefield",
+        "MovieGenre" : "Drama|Mystery|Thriller",
+        "ProductionYear" : 2001,
+        "budget" : "430"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f47"),
+        "id" : 39,
+        "movieName" : "Trees Lounge",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 2008,
+        "budget" : "9733"
+}
+Type "it" for more
+
+
+
+-----------------------------------------------------------------------------------------
+7. find all movies that are neither produced after 2000 nor with id greater than 100.
+Ans:- db.movie.find({$nor:[{productionYear:{$gt:2000}},{id:{$gt:100}}]}).pretty()
+
+ db.movie.find({$nor:[{ProductionYear:{$gt:2000}},{id:{$gt:100}}]}).pretty()
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f22"),
+        "id" : 2,
+        "movieName" : "Logan's War: Bound by Honor",
+        "MovieGenre" : "Action|Drama|Thriller",
+        "ProductionYear" : 1972,
+        "budget" : "77951"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f23"),
+        "id" : 3,
+        "movieName" : "Digimon: The Movie",
+        "MovieGenre" : "Adventure|Animation|Children",
+        "ProductionYear" : 2000,
+        "budget" : "06885"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f26"),
+        "id" : 6,
+        "movieName" : "Rains Came, The",
+        "MovieGenre" : "Adventure|Drama|Romance",
+        "ProductionYear" : 1998,
+        "budget" : "65"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f27"),
+        "id" : 7,
+        "movieName" : "Rich Hill",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 1985,
+        "budget" : "565"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f28"),
+        "id" : 8,
+        "movieName" : "Hamiltons, The",
+        "MovieGenre" : "Drama|Horror|Thriller",
+        "ProductionYear" : 1992,
+        "budget" : "8"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f29"),
+        "id" : 9,
+        "movieName" : "Down to the Cellar (Do pivnice)",
+        "MovieGenre" : "Adventure|Fantasy|Thriller",
+        "ProductionYear" : 1995,
+        "budget" : "3984"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2d"),
+        "id" : 13,
+        "movieName" : "Kautokeino Rebellion, The (Kautokeino-opprøret)",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 1993,
+        "budget" : "44222"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2e"),
+        "id" : 14,
+        "movieName" : "El tren de la memoria",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 1994,
+        "budget" : "86747"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f32"),
+        "id" : 18,
+        "movieName" : "Girls Rock!",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 1984,
+        "budget" : "79911"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f36"),
+        "id" : 22,
+        "movieName" : "Idol of the Crowds",
+        "MovieGenre" : "Drama|Romance",
+        "ProductionYear" : 2000,
+        "budget" : "188"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f37"),
+        "id" : 23,
+        "movieName" : "Making Love",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 1996,
+        "budget" : "18201"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f38"),
+        "id" : 24,
+        "movieName" : "Edward, My Son",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 1997,
+        "budget" : "54261"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f39"),
+        "id" : 25,
+        "movieName" : "Aladdin",
+        "MovieGenre" : "Adventure|Animation|Children|Comedy|Musical",
+        "ProductionYear" : 1988,
+        "budget" : "936"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f3e"),
+        "id" : 30,
+        "movieName" : "The Kick",
+        "MovieGenre" : "Action",
+        "ProductionYear" : 1994,
+        "budget" : "60044"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f3f"),
+        "id" : 31,
+        "movieName" : "Innocent Sleep, The",
+        "MovieGenre" : "Crime",
+        "ProductionYear" : 2000,
+        "budget" : "71"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f40"),
+        "id" : 32,
+        "movieName" : "Achilles and the Tortoise (Akiresu to kame)",
+        "MovieGenre" : "Comedy",
+        "ProductionYear" : 1997,
+        "budget" : "5291"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f42"),
+        "id" : 34,
+        "movieName" : "Mortuary",
+        "MovieGenre" : "Horror|Mystery|Thriller",
+        "ProductionYear" : 1990,
+        "budget" : "3998"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f44"),
+        "id" : 36,
+        "movieName" : "Seven Girlfriends",
+        "MovieGenre" : "Comedy|Romance",
+        "ProductionYear" : 1974,
+        "budget" : "20936"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f45"),
+        "id" : 37,
+        "movieName" : "Sink or Swim",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 1991,
+        "budget" : "5777"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f48"),
+        "id" : 40,
+        "movieName" : "Skulls, The",
+        "MovieGenre" : "Thriller",
+        "ProductionYear" : 1999,
+        "budget" : "02817"
+}
+Type "it" for more
+>
+
+
+
+----------------------------------------------------------------------------------------------
+find all movies that are not produced in 2000 or they do not have budget of 10000
+---------------------------------------------------------------------------------------------
+ANS:-  db.movie.find({$and:[{ProductionYear:{$not:{$lt:2000}}},{id:{$not:{$lt:100}}}]}).pretty()
+
+
+ db.movie.find({$and:[{ProductionYear:{$not:{$lt:2000}}},{id:{$not:{$lt:100}}}]}).pretty()
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f86"),
+        "id" : 102,
+        "movieName" : "This Is Elvis",
+        "MovieGenre" : "Documentary|Drama|Musical",
+        "ProductionYear" : 2008,
+        "budget" : "20"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f88"),
+        "id" : 104,
+        "movieName" : "Principal, The",
+        "MovieGenre" : "Action|Crime|Drama",
+        "ProductionYear" : 2002,
+        "budget" : "73655"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f89"),
+        "id" : 105,
+        "movieName" : "Last of the Mohicans, The",
+        "MovieGenre" : "Adventure|Drama",
+        "ProductionYear" : 2009,
+        "budget" : "06"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f8c"),
+        "id" : 108,
+        "movieName" : "Few Best Men, A",
+        "MovieGenre" : "Comedy",
+        "ProductionYear" : 2001,
+        "budget" : "78"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f8d"),
+        "id" : 109,
+        "movieName" : "In the Name of the Law",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 2005,
+        "budget" : "0191"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f8e"),
+        "id" : 110,
+        "movieName" : "Day the Earth Stood Still, The",
+        "MovieGenre" : "Drama|Sci-Fi|Thriller",
+        "ProductionYear" : 2004,
+        "budget" : "4"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f90"),
+        "id" : 112,
+        "movieName" : "Life Is Sweet",
+        "MovieGenre" : "Comedy|Drama",
+        "ProductionYear" : 2000,
+        "budget" : "428"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f91"),
+        "id" : 113,
+        "movieName" : "Black Beauty",
+        "MovieGenre" : "Adventure|Children|Drama",
+        "ProductionYear" : 2007,
+        "budget" : "48341"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f93"),
+        "id" : 115,
+        "movieName" : "Ray",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 2006,
+        "budget" : "57"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f94"),
+        "id" : 116,
+        "movieName" : "Hidden Agenda",
+        "MovieGenre" : "Action|Mystery|Thriller",
+        "ProductionYear" : 2009,
+        "budget" : "0"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f95"),
+        "id" : 117,
+        "movieName" : "Molly Maguires, The",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 2010,
+        "budget" : "49181"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f97"),
+        "id" : 119,
+        "movieName" : "Vicky Donor",
+        "MovieGenre" : "Comedy|Romance",
+        "ProductionYear" : 2005,
+        "budget" : "2"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f99"),
+        "id" : 121,
+        "movieName" : "Venus in Fur (La Vénus à la fourrure)",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 2002,
+        "budget" : "17"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f9d"),
+        "id" : 125,
+        "movieName" : "35 and Ticking",
+        "MovieGenre" : "Romance",
+        "ProductionYear" : 2003,
+        "budget" : "019"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f9e"),
+        "id" : 126,
+        "movieName" : "Lightspeed",
+        "MovieGenre" : "Action|Fantasy|Sci-Fi",
+        "ProductionYear" : 2010,
+        "budget" : "01379"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36fa2"),
+        "id" : 130,
+        "movieName" : "In Therapy (Divã)",
+        "MovieGenre" : "Comedy|Drama|Romance",
+        "ProductionYear" : 2007,
+        "budget" : "3335"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36fa3"),
+        "id" : 131,
+        "movieName" : "Paper Lion",
+        "MovieGenre" : "Comedy",
+        "ProductionYear" : 2005,
+        "budget" : "7"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36fa4"),
+        "id" : 132,
+        "movieName" : "Anima Mundi",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 2001,
+        "budget" : "538"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36fa5"),
+        "id" : 133,
+        "movieName" : "God Is Brazilian (Deus É Brasileiro)",
+        "MovieGenre" : "Adventure|Comedy|Fantasy",
+        "ProductionYear" : 2011,
+        "budget" : "333"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36fa7"),
+        "id" : 135,
+        "movieName" : "Wittgenstein",
+        "MovieGenre" : "Comedy|Drama",
+        "ProductionYear" : 2004,
+        "budget" : "168"
+}
+Type "it" for more
+
+
+
+------------------------------------------------------------------------------------------
+9:- find all movies that were produced from 2000 to 2010.
+------------------------------------------------------------------------------------------
+
+db.movie.find({productionYear:{$in:[2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010]}}).pretty()
+
+
+ db.movie.find({ProductionYear:{$in:[2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010]}}).pretty()
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f21"),
+        "id" : 1,
+        "movieName" : "Rugrats in Paris: The Movie",
+        "MovieGenre" : "Animation|Children|Comedy",
+        "ProductionYear" : 2010,
+        "budget" : "6"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f23"),
+        "id" : 3,
+        "movieName" : "Digimon: The Movie",
+        "MovieGenre" : "Adventure|Animation|Children",
+        "ProductionYear" : 2000,
+        "budget" : "06885"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f24"),
+        "id" : 4,
+        "movieName" : "Paradise Alley",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 2009,
+        "budget" : "446"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f25"),
+        "id" : 5,
+        "movieName" : "Our Man in Havana",
+        "MovieGenre" : "Comedy|Drama|Thriller",
+        "ProductionYear" : 2005,
+        "budget" : "11"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2a"),
+        "id" : 10,
+        "movieName" : "The Prince",
+        "MovieGenre" : "Action|Thriller",
+        "ProductionYear" : 2006,
+        "budget" : "74"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2b"),
+        "id" : 11,
+        "movieName" : "Blood Suckers from Outer Space",
+        "MovieGenre" : "Comedy|Horror|Sci-Fi",
+        "ProductionYear" : 2005,
+        "budget" : "300"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2c"),
+        "id" : 12,
+        "movieName" : "Reckless Moment, The",
+        "MovieGenre" : "Drama|Film-Noir",
+        "ProductionYear" : 2008,
+        "budget" : "6"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2f"),
+        "id" : 15,
+        "movieName" : "Apocalypse Now",
+        "MovieGenre" : "Action|Drama|War",
+        "ProductionYear" : 2004,
+        "budget" : "9538"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f33"),
+        "id" : 19,
+        "movieName" : "Brightness (Yeelen)",
+        "MovieGenre" : "Fantasy",
+        "ProductionYear" : 2007,
+        "budget" : "17722"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f34"),
+        "id" : 20,
+        "movieName" : "Raging Phoenix (Deu suay doo)",
+        "MovieGenre" : "Action|Romance",
+        "ProductionYear" : 2002,
+        "budget" : "20"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f36"),
+        "id" : 22,
+        "movieName" : "Idol of the Crowds",
+        "MovieGenre" : "Drama|Romance",
+        "ProductionYear" : 2000,
+        "budget" : "188"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f3a"),
+        "id" : 26,
+        "movieName" : "Wild, Wild Planet (I criminali della galassia)",
+        "MovieGenre" : "Sci-Fi",
+        "ProductionYear" : 2005,
+        "budget" : "08"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f3b"),
+        "id" : 27,
+        "movieName" : "Race for Your Life, Charlie Brown",
+        "MovieGenre" : "Adventure|Animation|Children",
+        "ProductionYear" : 2010,
+        "budget" : "69310"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f3c"),
+        "id" : 28,
+        "movieName" : "Like Crazy",
+        "MovieGenre" : "Drama|Romance",
+        "ProductionYear" : 2002,
+        "budget" : "9"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f3d"),
+        "id" : 29,
+        "movieName" : "Naked City, The",
+        "MovieGenre" : "Crime|Drama|Film-Noir|Mystery",
+        "ProductionYear" : 2010,
+        "budget" : "1"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f3f"),
+        "id" : 31,
+        "movieName" : "Innocent Sleep, The",
+        "MovieGenre" : "Crime",
+        "ProductionYear" : 2000,
+        "budget" : "71"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f41"),
+        "id" : 33,
+        "movieName" : "Deeper Shade of Blue, A",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 2007,
+        "budget" : "2"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f43"),
+        "id" : 35,
+        "movieName" : "1971",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 2003,
+        "budget" : "6521"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f46"),
+        "id" : 38,
+        "movieName" : "Salting the Battlefield",
+        "MovieGenre" : "Drama|Mystery|Thriller",
+        "ProductionYear" : 2001,
+        "budget" : "430"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f47"),
+        "id" : 39,
+        "movieName" : "Trees Lounge",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 2008,
+        "budget" : "9733"
+}
+Type "it" for more
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+Sort all movies descending based on the production year and if the year is same then alphabetically for their movie_names
+------------------------------------------------------------------------------------------------------------------------------------
+
+Ans :- db.movie.find({}).sort({ProductionYear:1},{movieName:1}).pretty()
+
+
+ db.movie.find({}).sort({ProductionYear:1},{movieName:1}).pretty()
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef3707c"),
+        "id" : 348,
+        "movieName" : "Death of a Salesman",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 1955,
+        "budget" : "98"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f4a"),
+        "id" : 42,
+        "movieName" : "Leviathan",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 1958,
+        "budget" : "533"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef3700f"),
+        "id" : 239,
+        "movieName" : "Brick Lane",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 1959,
+        "budget" : "6361"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef370ef"),
+        "id" : 463,
+        "movieName" : "Invincible Iron Man, The",
+        "MovieGenre" : "Animation",
+        "ProductionYear" : 1961,
+        "budget" : "855"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f52"),
+        "id" : 50,
+        "movieName" : "King of Texas, The",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 1964,
+        "budget" : "49728"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef3710a"),
+        "id" : 490,
+        "movieName" : "The Forgotten Space",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 1964,
+        "budget" : "96"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36fae"),
+        "id" : 142,
+        "movieName" : "All the Brothers Were Valiant",
+        "MovieGenre" : "Adventure|Drama|Romance",
+        "ProductionYear" : 1967,
+        "budget" : "5"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36ffb"),
+        "id" : 219,
+        "movieName" : "Querelle",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 1968,
+        "budget" : "11"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f22"),
+        "id" : 2,
+        "movieName" : "Logan's War: Bound by Honor",
+        "MovieGenre" : "Action|Drama|Thriller",
+        "ProductionYear" : 1972,
+        "budget" : "77951"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f44"),
+        "id" : 36,
+        "movieName" : "Seven Girlfriends",
+        "MovieGenre" : "Comedy|Romance",
+        "ProductionYear" : 1974,
+        "budget" : "20936"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef370a8"),
+        "id" : 392,
+        "movieName" : "Km. 0 - Kilometer Zero (Kilómetro cero)",
+        "MovieGenre" : "Comedy|Drama",
+        "ProductionYear" : 1978,
+        "budget" : "6"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f32"),
+        "id" : 18,
+        "movieName" : "Girls Rock!",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 1984,
+        "budget" : "79911"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f64"),
+        "id" : 68,
+        "movieName" : "Stille Nacht I: Dramolet",
+        "MovieGenre" : "Animation",
+        "ProductionYear" : 1984,
+        "budget" : "72784"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef3700c"),
+        "id" : 236,
+        "movieName" : "Io Island (Iodo)",
+        "MovieGenre" : "Mystery",
+        "ProductionYear" : 1984,
+        "budget" : "26"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef37090"),
+        "id" : 368,
+        "movieName" : "Last Warrior, The (Last Patrol, The)",
+        "MovieGenre" : "Action|Drama",
+        "ProductionYear" : 1984,
+        "budget" : "305"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef3709d"),
+        "id" : 381,
+        "movieName" : "Arena",
+        "MovieGenre" : "Action|Thriller",
+        "ProductionYear" : 1984,
+        "budget" : "3677"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef370ae"),
+        "id" : 398,
+        "movieName" : "Intouchables",
+        "MovieGenre" : "Comedy|Drama",
+        "ProductionYear" : 1984,
+        "budget" : "2"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f27"),
+        "id" : 7,
+        "movieName" : "Rich Hill",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 1985,
+        "budget" : "565"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f50"),
+        "id" : 48,
+        "movieName" : "Nixon by Nixon: In His Own Words",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 1985,
+        "budget" : "4520"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f83"),
+        "id" : 99,
+        "movieName" : "Rainmaker, The",
+        "MovieGenre" : "Comedy|Romance|Thriller|Western",
+        "ProductionYear" : 1985,
+        "budget" : "7"
+}
+Type "it" for more
+> 
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+in query 10 skip the first 10 entries and fetch the next 5
+-----------------------------------------------------------------------------------------------------------------------------------------
+ANS:- db.movie.find({}).skip(10).limit(5).pretty()
+
+
+ db.movie.find().skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2b"),
+        "id" : 11,
+        "movieName" : "Blood Suckers from Outer Space",
+        "MovieGenre" : "Comedy|Horror|Sci-Fi",
+        "ProductionYear" : 2005,
+        "budget" : "300"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2c"),
+        "id" : 12,
+        "movieName" : "Reckless Moment, The",
+        "MovieGenre" : "Drama|Film-Noir",
+        "ProductionYear" : 2008,
+        "budget" : "6"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2d"),
+        "id" : 13,
+        "movieName" : "Kautokeino Rebellion, The (Kautokeino-opprøret)",
+        "MovieGenre" : "Drama",
+        "ProductionYear" : 1993,
+        "budget" : "44222"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2e"),
+        "id" : 14,
+        "movieName" : "El tren de la memoria",
+        "MovieGenre" : "Documentary",
+        "ProductionYear" : 1994,
+        "budget" : "86747"
+}
+{
+        "_id" : ObjectId("614c8d8c1d0ebc875ef36f2f"),
+        "id" : 15,
+        "movieName" : "Apocalypse Now",
+        "MovieGenre" : "Action|Drama|War",
+        "ProductionYear" : 2004,
+        "budget" : "9538"
+}
+> 
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+remove movie genre from the first 10 movies in query 10.
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+
